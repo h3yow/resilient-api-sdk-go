@@ -19,6 +19,10 @@ var (
 	ErrServer = errors.New("sdk: server error")
 	// ErrPagination 表示分页遍历出现异常（游标回退、重复页等）。
 	ErrPagination = errors.New("sdk: pagination error")
+	// ErrPageSequence 表示服务端给出的页序号未按顺序推进（乱序、缺页、跳页）。
+	ErrPageSequence = errors.New("sdk: page sequence error")
+	// ErrDedupCapacity 表示条目去重键集合达到配置上限且策略为失败。
+	ErrDedupCapacity = errors.New("sdk: dedup capacity exhausted")
 )
 
 // APIError 是服务端返回的结构化错误。
